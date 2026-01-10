@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Honalolo.Inforamtion.Domain.Common;
 
 namespace Honalolo.Inforamtion.Domain.Entities.Locations
 {
-    internal class Continent
+    public class Continent : BaseEntity
     {
+        public string Name { get; set; } = string.Empty;
+
+        // A city has many attractions
+        public ICollection<Country> Countries { get; set; } = new List<Country>();
     }
 }

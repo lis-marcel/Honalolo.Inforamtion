@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Honalolo.Inforamtion.Domain.Common;
+using Honalolo.Inforamtion.Domain.Entities.Attractions;
+using Honalolo.Inforamtion.Domain.Enums;
 
-namespace Honalolo.Inforamtion.Domain.Entities.Users
+public class User : BaseEntity
 {
-    internal class User
-    {
-    }
+    public UserRole Role { get; set; }
+    public string UserName { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string PasswordHash { get; set; } = string.Empty;
+
+    public ICollection<Attraction> AuthoredAttractions { get; set; } = new List<Attraction>();
 }

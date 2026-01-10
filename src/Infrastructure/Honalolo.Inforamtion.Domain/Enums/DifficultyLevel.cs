@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Honalolo.Inforamtion.Domain.Enums
+﻿namespace Honalolo.Inforamtion.Domain.Enums
 {
-    internal class DifficultyLevel
+    public enum DifficultyLevel
     {
+        Beginner = 0,
+        Intermediate = 1,
+        Advanced = 2       
     }
 }
