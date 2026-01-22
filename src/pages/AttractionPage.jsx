@@ -7,7 +7,7 @@ export default function AttractionPage() {
         <Gallery />
 
         <div className="grid md:grid-cols-[2fr_1fr] gap-4">
-            <div className="p-4 bg-white rounded-[8px] shadow-md">
+            <div className="p-4 bg-white border-1">
                 <Point
                     className="text-[#333]"
                     icon="map-pin"
@@ -18,7 +18,7 @@ export default function AttractionPage() {
                 <p className="mt-2 !max-w-[60ch]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste numquam ratione, dolorum, eveniet ducimus similique perspiciatis unde temporibus officia saepe. Quam vero modi debitis cumque blanditiis soluta accusamus rem cum voluptatem culpa corrupti dicta, consequatur repudiandae nobis? Laboriosam saepe illum ipsa quaerat quasi atque eaque vel itaque quod culpa?</p>
             </div>
 
-            <div className="p-4 bg-white rounded-[8px] shadow-md flex flex-col gap-3">
+            <div className="p-4 bg-white border-1 flex flex-col gap-3">
                 <h2 className="font-medium text-[24px] md:text-[32px]">Szczegóły</h2>
 
                 <div className="flex flex-col gap-2">
