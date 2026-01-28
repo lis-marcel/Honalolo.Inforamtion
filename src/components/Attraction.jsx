@@ -1,5 +1,5 @@
 import FeatherIcon from "feather-icons-react";
-import image from "../assets/hero.jpg";
+import image from "../assets/register.jpg";
 import Badge from "./Badge";
 import Button from "./Button";
 import { Link } from "react-router";

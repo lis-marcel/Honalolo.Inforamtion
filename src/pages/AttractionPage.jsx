@@ -1,9 +1,9 @@
 import { useState } from "react";
-import image from "../assets/hero.jpg";
+import image from "../assets/register.jpg";
 import Attraction, { Point } from "../components/Attraction";
 
 export default function AttractionPage() {
-    return <div className="mx-auto max-w-[var(--page-width)] p-4 md:p-8 flex flex-col gap-4">
+    return <div className="mx-auto p-4 md:p-8 flex flex-col gap-4">
         <Gallery />
 
         <div className="grid md:grid-cols-[2fr_1fr] gap-4">
@@ -52,7 +52,7 @@ export default function AttractionPage() {
 
         <div className="mt-7 flex flex-col gap-4">
             <h2 className="font-medium text-[24px] md:text-[32px]">Zobacz więcej</h2>
-            <div className="m-auto max-w-[var(--page-width)] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+            <div className="m-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
                 <Attraction />
                 <Attraction />
                 <Attraction />
@@ -65,11 +65,11 @@ export default function AttractionPage() {
 function Gallery() {
     const [currentImage, setCurrentImage] = useState(image);
     return <div className="grid md:grid-cols-[1fr_100px] lg:grid-cols-[1fr_150px] gap-2 md:h-[80vh] overflow-hidden ">
-        <img src={currentImage} className="rounded-[8px] w-full md:h-[80vh] object-cover aspect-[16/9] flex" />
+        <img src={currentImage} className="rounded-[0px] w-full md:h-[80vh] object-cover aspect-[16/9] flex border-1" />
 
-        <div className="flex md:flex-col gap-2 h-full overflow-x-auto md:overflow-y-auto">
+        <div className="flex md:flex-col gap-2 h-full overflow-x-auto md:overflow-y-auto border-b-1">
             {[1, 2, 3, 4, 5, 6, 7, 8].map(() => {
-                return <img src={image} onClick={() => setCurrentImage(image)} className="w-[80px] md:w-[100px] lg:w-[150px] aspect-[1] object-cover rounded-[8px]" />
+                return <img src={image} onClick={() => setCurrentImage(image)} className="w-[80px] md:w-[100px] lg:w-[150px] aspect-[1] object-cover rounded-[0px] border-1" />
             })}
         </div>
     </div>

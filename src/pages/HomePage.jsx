@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import image from "../assets/hero.png";
+import image from "../assets/home.png";
 import Attraction from "../components/Attraction";
 import Button from "../components/Button";
 
@@ -14,9 +14,16 @@ export default function HomePage() {
             }>
                 <h1 className="font-medium text-[42px] md:text-[48px] lg:text-[64px]"> Odkryj uroki twojego regionu </h1>
                 <p className="text-[14px] sm:text-[16px]">Poznaj najciekawsze miejsca, szlaki i wydarzenia w okolicy. Znajdziesz tu praktyczne informacje o atrakcjach, restauracjach i możliwościach aktywnego wypoczynku — wszystko, czego potrzebujesz, by zaplanować udaną podróż.</p>
-                <Link to="/search">
-                <Button>Przejdź do wyszukiwarki</Button>
-                </Link>
+
+                <div className="flex gap-2">
+                    <Link to="/login">
+                        <Button>Zaloguj się</Button>
+                    </Link>
+                    <Link to="/register">
+                        <Button className="!bg-[#eee] !text-black">Zarejestruj się</Button>
+                    </Link>
+
+                </div>
             </div>
         </div>
 
