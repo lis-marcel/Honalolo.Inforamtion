@@ -6,8 +6,8 @@ export default function AttractionPage() {
     return <div className="mx-auto p-4 md:p-8 flex flex-col gap-4">
         <Gallery />
 
-        <div className="grid md:grid-cols-[2fr_1fr] gap-4">
-            <div className="p-4 bg-white border-1">
+        <div className="border-1 rounded-[var(--rounded)] bg-white p-4 mt-4 grid md:grid-cols-[2fr_1fr] gap-4">
+            <div className="rounded-[var(--rounded)]">
                 <Point
                     className="text-[#333]"
                     icon="map-pin"
@@ -18,7 +18,7 @@ export default function AttractionPage() {
                 <p className="mt-2 !max-w-[60ch]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste numquam ratione, dolorum, eveniet ducimus similique perspiciatis unde temporibus officia saepe. Quam vero modi debitis cumque blanditiis soluta accusamus rem cum voluptatem culpa corrupti dicta, consequatur repudiandae nobis? Laboriosam saepe illum ipsa quaerat quasi atque eaque vel itaque quod culpa?</p>
             </div>
 
-            <div className="p-4 bg-white border-1 flex flex-col gap-3">
+            <div className="rounded-[var(--rounded)] flex flex-col gap-3">
                 <h2 className="font-medium text-[24px] md:text-[32px]">Szczegóły</h2>
 
                 <div className="flex flex-col gap-2">
@@ -36,9 +36,6 @@ export default function AttractionPage() {
                         icon="box"
                         label={`Kuchnia meksykańska`}
                     />
-
-
-
 
                     <Point
                         icon="globe"
@@ -65,11 +62,11 @@ export default function AttractionPage() {
 function Gallery() {
     const [currentImage, setCurrentImage] = useState(image);
     return <div className="grid md:grid-cols-[1fr_100px] lg:grid-cols-[1fr_150px] gap-2 md:h-[80vh] overflow-hidden ">
-        <img src={currentImage} className="rounded-[0px] w-full md:h-[80vh] object-cover aspect-[16/9] flex border-1" />
+        <img src={currentImage} className="rounded-[var(--rounded)] w-full md:h-[80vh] object-cover aspect-[16/9] flex border-1" />
 
-        <div className="flex md:flex-col gap-2 h-full overflow-x-auto md:overflow-y-auto border-b-1">
+        <div className="flex md:flex-col gap-2 h-full overflow-x-auto md:overflow-y-auto">
             {[1, 2, 3, 4, 5, 6, 7, 8].map(() => {
-                return <img src={image} onClick={() => setCurrentImage(image)} className="w-[80px] md:w-[100px] lg:w-[150px] aspect-[1] object-cover rounded-[0px] border-1" />
+                return <img src={image} onClick={() => setCurrentImage(image)} className="w-[80px] md:w-[100px] lg:w-[150px] aspect-[1] object-cover rounded-[var(--rounded)] border-1" />
             })}
         </div>
     </div>

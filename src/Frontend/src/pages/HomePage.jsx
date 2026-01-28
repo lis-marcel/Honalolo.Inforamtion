@@ -16,13 +16,9 @@ export default function HomePage() {
                 <p className="text-[14px] sm:text-[16px]">Poznaj najciekawsze miejsca, szlaki i wydarzenia w okolicy. Znajdziesz tu praktyczne informacje o atrakcjach, restauracjach i możliwościach aktywnego wypoczynku — wszystko, czego potrzebujesz, by zaplanować udaną podróż.</p>
 
                 <div className="flex gap-2">
-                    <Link to="/login">
-                        <Button>Zaloguj się</Button>
-                    </Link>
                     <Link to="/register">
-                        <Button className="!bg-[#eee] !text-black">Zarejestruj się</Button>
+                        <Button>Dołącz do społeczności</Button>
                     </Link>
-
                 </div>
             </div>
         </div>

@@ -14,24 +14,24 @@ export default function Nav() {
                 <img src={logo} className="h-[50px]" />
             </Link>
 
-            <div className="flex gap-4 text-[15px]">
+            {/* <div className="flex gap-4 text-[15px]">
                 <Link to="/">Strona główna</Link>
                 <Link to="/search">Wyszukiwarka</Link>
                 <Link>O nas</Link>
                 <Link>Kontakt</Link>
-            </div>
+            </div> */}
 
             {!auth.value ? (
-            <div className="pr-2 flex gap-2">
-                <Link to="/login">
-                    <Button className="text-[14px] !px-2 !py-1.5">Logowanie</Button>
-                </Link>
-                <Link to="/register">
-                    <Button className="text-[14px] !px-2 !py-1.5 !bg-[#eee]">Rejestracja</Button>
-                </Link>
-            </div>) : <Link to="/profile" className="flex items-center gap-2">
-                <FeatherIcon icon="user" size={24}/>
-                Nazwa użytkownika    
+                <div className="pr-2 flex gap-2">
+                    <Link to="/login">
+                        <Button>Logowanie</Button>
+                    </Link>
+                    <Link to="/register">
+                        <Button className="!bg-[#ddd]">Rejestracja</Button>
+                    </Link>
+                </div>) : <Link to="/profile" className="flex items-center gap-2">
+                <FeatherIcon icon="user" size={24} />
+                Nazwa użytkownika
             </Link>}
         </div>
     </nav>

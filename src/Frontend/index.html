@@ -22,6 +22,7 @@
             --green: white;
             --white: #FCF9EA;
             --page-width: 1600px;
+            --rounded: 5px;
         }
 
         * {
@@ -37,8 +38,11 @@
             font-family: "Varta", sans-serif;
         }
 
-        input, select{
+        input, select, textarea, button{
             font-family: "Helvetica", "Inter", sans-serif;
+            font-size: 14px !important;
+            border-radius: var(--rounded);
+            font-weight: 400 !important;
         }
 
         input:focus, select:focus{
@@ -47,6 +51,13 @@
         }
 
         button{
+            border-radius: var(--rounded);
+            border: none;
+        }
+
+        input[type="file"]{
+            padding: 8px;
+            border: 1px solid black;
             line-height: 100%;
         }
 

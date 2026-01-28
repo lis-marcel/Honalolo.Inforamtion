@@ -5,9 +5,9 @@ import Button from "./Button";
 import { Link } from "react-router";
 
 export default function Attraction() {
-    return <Link to="/attraction/elo" className="rounded-[0px] bg-white border-1">
+    return <Link to="/attraction/elo" className="rounded-[var(--rounded)] bg-white border-1">
         <div className="relative border-b-1">
-            <img className="w-full aspect-[16/9] rounded-t-[0px] object-cover" src={image} />
+            <img className="w-full aspect-[16/9] rounded-t-[var(--rounded)] object-cover" src={image} />
 
             <Badge className="!border-0 absolute left-2 top-2 bg-[var(--lgreen)]">SZLAK</Badge>
         </div>
